@@ -1,4 +1,4 @@
-# MathConstruct
+# MathConstruct: Challenging LLM Reasoning with Constructive Proofs
 
 MathConstruct is a benchmarking framework for evaluating language models on constructive proofs. This README explains how to run models, analyze results, and reproduce findings from our paper.
 
