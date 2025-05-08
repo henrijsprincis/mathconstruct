@@ -70,6 +70,7 @@ class ProblemBMO2019C1(Problem):
     def __init__(self, N: int):
         self.N = N
         self.vocabulary = "0123456789,[]"
+        self.max_length = N*2
 
     def get_problem(self):
         return PROBLEM_TEMPLATE.format(N=self.N, twon=2*self.N, m=self.N-2)

@@ -35,6 +35,7 @@ class Problem_HMO_2022_1(Problem):
         self.n = n
         self.m = n//2 - 1
         self.vocabulary = "0123456789,.[]"
+        self.max_length = n
 
     def get_problem(self):
         return PROBLEM_TEMPLATE.format(n=self.n, m=self.m)

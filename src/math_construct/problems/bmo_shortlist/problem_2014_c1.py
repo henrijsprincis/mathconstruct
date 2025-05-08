@@ -33,6 +33,7 @@ class ProblemBMO2014C1(Problem):
     def __init__(self, N: int):
         self.N = N
         self.vocabulary = "01,[]"
+        self.max_length = N
 
     def get_problem(self):
         return PROBLEM_TEMPLATE.format(N=self.N, m = (self.N//10)*5 + min(self.N%10, 5))
