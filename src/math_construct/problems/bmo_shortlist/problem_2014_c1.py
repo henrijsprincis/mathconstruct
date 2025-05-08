@@ -7,7 +7,7 @@ import random
 
 
 FORMATTING_INSTRUCTIONS = r"""Output the sequence of the state of the seats as a comma-separated list in $\boxed{...}$, where a '1' signifies an occupied seat, and '0' signifies an empty one. Ex: $\boxed{[1,1,0,0,1,0,1]}$"""
-FORMATTING_INSTRUCTIONS = "Output the sequence of the state of the seats as a python list, where a 1 signifies an occupied seat, and 0 signifies an empty one. Ex: "
+FORMATTING_INSTRUCTIONS = "Output the sequence of the state of the seats as a python list, where a 1 signifies an occupied seat, and 0 signifies an empty one. For example [1,1,0,0,1,0,1]"
 
 def get_solution(k: int) -> list[list[int]]:
     res = []
@@ -32,6 +32,7 @@ class ProblemBMO2014C1(Problem):
 
     def __init__(self, N: int):
         self.N = N
+        self.vocabulary = "01,[]"
 
     def get_problem(self):
         return PROBLEM_TEMPLATE.format(N=self.N, m = (self.N//10)*5 + min(self.N%10, 5))

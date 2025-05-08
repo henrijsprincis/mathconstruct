@@ -34,6 +34,7 @@ class Problem_HMO_2022_1(Problem):
     def __init__(self, n: int):
         self.n = n
         self.m = n//2 - 1
+        self.vocabulary = "0123456789,.[]"
 
     def get_problem(self):
         return PROBLEM_TEMPLATE.format(n=self.n, m=self.m)

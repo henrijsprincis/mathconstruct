@@ -6,6 +6,7 @@ import random
 
 
 FORMATTING_INSTRUCTIONS = r"""Output the order as a comma-separated sequence of numbers from 1 to the number of couples, where each number appears exactly twice, inside a \boxed. Consider each 2 duplicate numbers to represent a given couple. For example: \boxed{( 1,2,3,3,1,2)}"""
+FORMATTING_INSTRUCTIONS = "Output the order as a python list of numbers from 1 to the number of couples, where each number appears exactly twice. Consider each 2 duplicate numbers to represent a given couple. For example: [1,2,3,3,2,1]"
 
 def get_solution(k: int) -> list[list[int]]:
     res = []
@@ -68,6 +69,7 @@ class ProblemBMO2019C1(Problem):
 
     def __init__(self, N: int):
         self.N = N
+        self.vocabulary = "0123456789,[]"
 
     def get_problem(self):
         return PROBLEM_TEMPLATE.format(N=self.N, twon=2*self.N, m=self.N-2)
